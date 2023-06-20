@@ -1,28 +1,18 @@
-const todos = [
-  {
-    id: 1,
-    text: "take out trash",
-    isCompleted: true,
-  },
-  {
-    id: 2,
-    text: "Meeting with bobo",
-    isCompleted: true,
-  },
-  {
-    id: 3,
-    text: "Dentist appt",
-    isCompleted: true,
-  },
+//iternary operator
+const x =10;
+const color = x>10? 'yello': 'blue';
 
-];
-//forEach, map(returns in array), filter
-//chaining
+//switch
 
-
-const todoCompleted = todos.filter(function(todo){
-    return todos.isCompleted ===true;
-}).map(function(todo){return todo.text});
-
-
- 
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log ('color is blue');
+        break;
+    default: 
+        console.log('color is Not red or blue');
+        break;
+    
+}
