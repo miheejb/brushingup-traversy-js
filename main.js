@@ -1,9 +1,8 @@
-//DOM Document orient model
+const ul = document.querySelector('.items');
 
-//Single element
+ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'brad';
+ul.lastElementChild.innerHTML = '<h1>hello</h1>'
 
-document.querySelector('.className')
-document.getElementById('');
-
-//Multiple elements
-console.log(document.querySelectorAll('.item'));
+const btn = document.querySelector('.btn');
