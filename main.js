@@ -17,19 +17,12 @@ const todos = [
 
 ];
 //forEach, map(returns in array), filter
+//chaining
 
-todos.forEach(function(todo){
-    return console.log(todo.text);
-})
-
-const todoText = todo.map(function(todo){
-    return todo.text;
-})
 
 const todoCompleted = todos.filter(function(todo){
     return todos.isCompleted ===true;
-});
+}).map(function(todo){return todo.text});
 
-console.log(todoCompleted);
 
  
