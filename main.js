@@ -1,18 +1,47 @@
-//iternary operator
-const x =10;
-const color = x>10? 'yello': 'blue';
+//Object orient programming
 
-//switch
+//constructor function
+function Person(firstName, lastName,dob){
+    this.firstName = firstName;
+    this.lastName =lastname;
+    this.dob = new Date(dob);
+    this.getBirthYear = function(){
+        return this.dob.getFullYear();
+    };
+    this.getFullName = function(){
+        return(`${firstname} ${lastName}`);
+    }
 
-switch(color){
-    case 'red':
-        console.log('color is red');
-        break;
-    case 'blue':
-        console.log ('color is blue');
-        break;
-    default: 
-        console.log('color is Not red or blue');
-        break;
-    
 }
+
+//using prototype
+
+Person.prototype.getBirthYear = function(){
+        return this.dob.getFullYear();}
+Person.prototype.getFullName = function () {
+  return `${firstname} ${lastName}`;
+};
+
+
+//Class
+//method is function inside of the class
+class Person{
+    constructor(firstName, lastName, dob){
+        this.firstName = firstName;
+        this.lastName = lastname;
+        this.dob = new Date(dob);
+    }
+    getBirthyear(){
+
+    }
+    getFullName(){
+        
+    }
+}
+
+
+//Instantiate object
+const person1 = new Person('John', 'Doe', '4-3-1998')
+console.log
+
+console.log(person1.getBirthYear);
