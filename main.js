@@ -36,3 +36,5 @@ btn.addEventListener('click', (e)=>{
     document.querySelector('body').classList.add('bg-dark');
     document.querySelector('.item').lastElementChild,innerHTML=''
 });
+
+//backend connects to the Database // Fetch API or AJAX
