@@ -1,40 +1,21 @@
-const myForm = document.querySelector('#my-form');
-const nameInput = document.querySelector("#name");
-const emailinput = document.querySelector("#email");
-const msg = document.querySelector(".msg");
-const userList = document.querySelector("#users");
+// if the nubmer is devisable by three return fizz
+//if the nubmer is devisible by five return Buzz
+//if the nubmer is devisible by three and five ... return fizzBuzz
+// if the number is not divisible by 3 or 5 => input
+//No a number => 'Not a number'
 
-myForm. addEventListener('submit',onSubmit);
+const input = fizzBuzz(7);
+console.log (input);
 
-function onSubmint(e){
-    e.preventDefault();
+function fizzBuzz(number) {
+  if (typeof number !== 'number') return 'NaN';
 
-    if(nameInput.value === '' || emailinput.value ===''){
-        msg.classList.add('error');
-        msg.innerHTML = 'Please enter all fields'
+  if (number % 3 === 0 && number / 5 === 0) return 'FizzBuzz';
 
-        setTimeout(()=> msg.remove, 3000)
-    } else{ 
-        const li = document.createElement('li');
-        li.appendChild(document.createTextNode(`{nameInput.value}: ${emailInput.value}`));
-     }
-     userList.appendChild(li)
+  if (number % 3 ===0) return 'Fizz';
 
-    console.log(nameInput.value);
+  if (number % 5 === 0) return 'Buzz';
 
-    //clear fields
-    nameInput.value='';
-    emailInput.value=''
+  return number
+  
 }
-
-///toggle dark background
-const btn = document.querySelector('.btn');
-
-btn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    document.querySelector('#my-form').style.background = '#ccc';
-    document.querySelector('body').classList.add('bg-dark');
-    document.querySelector('.item').lastElementChild,innerHTML=''
-});
-
-//backend connects to the Database // Fetch API or AJAX
